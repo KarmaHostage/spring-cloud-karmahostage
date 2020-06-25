@@ -1,0 +1,39 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <karmahostage-client.version>0.0.1</karmahostage-client.version>
+    </properties>
+    <parent>
+        <artifactId>spring-cloud-dependencies-parent</artifactId>
+        <groupId>org.springframework.cloud</groupId>
+        <version>2.3.0.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <artifactId>spring-cloud-karmahostage-dependencies</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Spring Cloud Karmahostage :: Dependencies</name>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.karmahostage</groupId>
+                <artifactId>karmahostage-java</artifactId>
+                <version>${karmahostage-client.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>github-karmahostage-api</id>
+            <name>GitHub Karmahostage API Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/Karmahostage/java-client</url>
+        </repository>
+    </repositories>
+
+</project>
