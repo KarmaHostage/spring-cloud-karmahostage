@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "spring.cloud.karmahostage.api-key",
+      "type": "java.lang.Boolean",
+      "description": "Karmahostage API Key",
+      "defaultValue": false
+    }
+  ]
+}

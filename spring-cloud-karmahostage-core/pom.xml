@@ -10,11 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <artifactId>spring-cloud-karmahostage-config</artifactId>
+    <artifactId>spring-cloud-karmahostage-core</artifactId>
 
-    <name>Spring Cloud Karmahostage :: Config</name>
+    <name>Spring Cloud Karmahostage :: Core</name>
 
     <dependencies>
+        <dependency>
+            <groupId>com.karmahostage</groupId>
+            <artifactId>karmahostage-java</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
@@ -54,4 +58,5 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+
 </project>
