@@ -11,6 +11,7 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/>
     </parent>
+    <groupId>com.karmahostage</groupId>
     <artifactId>spring-cloud-karmahostage-dependencies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
