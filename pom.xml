@@ -26,9 +26,8 @@
     <modules>
         <module>spring-cloud-karmahostage-dependencies</module>
         <module>spring-cloud-starter-karmahostage</module>
-        <module>spring-cloud-karmahostage-config</module>
-        <!--        <module>spring-cloud-starter-karmahostage-config</module>-->
-        <!--        <module>spring-cloud-starter-karmahostage-encryption</module>-->
+        <module>spring-cloud-karmahostage-secrets</module>
+        <module>spring-cloud-karmahostage-core</module>
     </modules>
 
     <properties>
@@ -68,10 +67,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>flatten-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
@@ -93,14 +88,6 @@
                     <!-- Workaround for https://issues.apache.org/jira/browse/SUREFIRE-1588 -->
                     <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>io.spring.javaformat</groupId>
-                <artifactId>spring-javaformat-maven-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -126,5 +113,11 @@
         </plugins>
     </build>
 
-
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub Karmahostage API Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/Karmahostage/java-client</url>
+        </repository>
+    </repositories>
 </project>
