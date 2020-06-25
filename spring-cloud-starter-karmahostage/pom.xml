@@ -9,13 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <packaging>pom</packaging>
+
     <artifactId>spring-cloud-starter-karmahostage</artifactId>
     <name>Spring Cloud Karmahostage :: Starter</name>
 
     <dependencies>
         <dependency>
             <groupId>com.karmahostage</groupId>
-            <artifactId>spring-cloud-karmahostage-config</artifactId>
+            <artifactId>spring-cloud-karmahostage-secrets</artifactId>
         </dependency>
     </dependencies>
 
