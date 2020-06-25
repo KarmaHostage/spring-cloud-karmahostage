@@ -26,6 +26,11 @@
                 <artifactId>karmahostage-java</artifactId>
                 <version>${karmahostage-client.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.karmahostage</groupId>
+                <artifactId>spring-cloud-karmahostage-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

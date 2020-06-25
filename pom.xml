@@ -26,6 +26,7 @@
     <modules>
         <module>spring-cloud-karmahostage-dependencies</module>
         <module>spring-cloud-starter-karmahostage</module>
+        <module>spring-cloud-karmahostage-config</module>
         <!--        <module>spring-cloud-starter-karmahostage-config</module>-->
         <!--        <module>spring-cloud-starter-karmahostage-encryption</module>-->
     </modules>
