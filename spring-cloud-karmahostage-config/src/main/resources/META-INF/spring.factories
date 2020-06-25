@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.karmahostage.cloud.config.reload.ConfigReloadAutoConfiguration
-org.springframework.cloud.bootstrap.BootstrapConfiguration=\
-com.karmahostage.cloud.config.BootstrapConfiguration
