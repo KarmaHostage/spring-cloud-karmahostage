@@ -1,7 +1,7 @@
 package com.karmahostage.cloud;
 
 import com.karmahostage.client.Karmahostage;
-import com.karmahostage.client.secret.Secret;
+import com.karmahostage.secret.response.ExposedSecretResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.core.env.MapPropertySource;
@@ -9,20 +9,20 @@ import org.springframework.core.env.MapPropertySource;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SecretsPropertySource extends MapPropertySource {
+public class KarmahostageSecretsPropertySource extends MapPropertySource {
 
-    private static final Log LOG = LogFactory.getLog(SecretsPropertySource.class);
+    private static final Log LOG = LogFactory.getLog(KarmahostageSecretsPropertySource.class);
 
     private static final String PREFIX = "secrets";
 
-    public SecretsPropertySource(Karmahostage client, String path) {
+    public KarmahostageSecretsPropertySource(Karmahostage client, String path) {
         super(getSourceName(client, path),
                 getSourceData(client, path));
     }
 
     private static String getSourceName(final Karmahostage client,
                                         final String path) {
-        return PREFIX + "karmahostage" + "/" + path;
+        return PREFIX + ".karmahostage" + "/" + path;
     }
 
     private static Map<String, Object> getSourceData(Karmahostage client,
@@ -30,7 +30,7 @@ public class SecretsPropertySource extends MapPropertySource {
         Map<String, Object> result = new HashMap<>();
 
         try {
-            final Secret secret = client.secrets().retrieveByKey(path);
+            final ExposedSecretResponse secret = client.secrets().retrieveByKey(path);
             putAll(secret, result);
         } catch (Exception e) {
             LOG.warn(String.format("Can't read secret with name: [%s] (cause: %s). Ignoring", path, e.getMessage()));
@@ -38,7 +38,7 @@ public class SecretsPropertySource extends MapPropertySource {
         return result;
     }
 
-    private static void putAll(Secret secret, Map<String, Object> result) {
+    private static void putAll(ExposedSecretResponse secret, Map<String, Object> result) {
         if (secret != null) {
             result.put(secret.getKey(), secret.getValue());
         }

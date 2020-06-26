@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @ConfigurationProperties("spring.cloud.karmahostage.secrets")
-public class SecretsConfigProperties {
+public class KarmahostageSecretsConfigProperties {
 
     private List<String> paths = new LinkedList<>();
 
