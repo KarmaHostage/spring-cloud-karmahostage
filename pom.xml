@@ -27,6 +27,7 @@
         <module>spring-cloud-karmahostage-dependencies</module>
         <module>spring-cloud-starter-karmahostage</module>
         <module>spring-cloud-karmahostage-secrets</module>
+        <module>spring-cloud-karmahostage-examples</module>
         <module>spring-cloud-karmahostage-core</module>
     </modules>
 
@@ -34,6 +35,7 @@
         <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
         <spring-cloud-commons.version>2.2.3.RELEASE</spring-cloud-commons.version>
         <spring-cloud-config.version>2.2.3.RELEASE</spring-cloud-config.version>
+        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
     </properties>
 
     <dependencyManagement>
