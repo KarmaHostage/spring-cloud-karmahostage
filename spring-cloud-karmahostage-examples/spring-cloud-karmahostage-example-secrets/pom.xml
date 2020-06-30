@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>spring-cloud-karmahostage-examples</artifactId>
-        <groupId>com.karmahostage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>com.karmahostage.cloud</groupId>
+        <version>0.0.5-SNAPSHOT</version>
     </parent>
 
     <artifactId>spring-cloud-karmahostage-example-secrets</artifactId>
@@ -15,6 +15,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.karmahostage.cloud</groupId>
+            <artifactId>spring-cloud-starter-karmahostage</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-kotlin</artifactId>
             <version>2.10.3</version>
@@ -22,10 +26,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.karmahostage</groupId>
-            <artifactId>spring-cloud-starter-karmahostage</artifactId>
         </dependency>
     </dependencies>
 

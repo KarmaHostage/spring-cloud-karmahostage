@@ -10,9 +10,9 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.karmahostage</groupId>
+    <groupId>com.karmahostage.cloud</groupId>
     <artifactId>spring-cloud-karmahostage</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Spring Cloud Karmahostage</name>
 
@@ -41,7 +41,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.karmahostage</groupId>
+                <groupId>com.karmahostage.cloud</groupId>
                 <artifactId>spring-cloud-karmahostage-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
@@ -54,7 +54,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-config-dependencies</artifactId>
@@ -90,6 +89,7 @@
                     <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
@@ -111,9 +111,16 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven-deploy-plugin.version}</version>
+                <configuration>
+                    <repositoryId>github</repositoryId>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 
     <distributionManagement>
         <snapshotRepository>
@@ -131,7 +138,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Karmahostage API Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/Karmahostage/java-client</url>
+            <url>https://maven.pkg.github.com/Karmahostage/maven-repo</url>
         </repository>
     </repositories>
 </project>

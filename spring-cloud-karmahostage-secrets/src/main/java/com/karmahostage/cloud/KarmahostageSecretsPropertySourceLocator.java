@@ -35,7 +35,7 @@ public class KarmahostageSecretsPropertySourceLocator implements PropertySourceL
                     "composite-secrets");
             if (this.properties.getPaths().isEmpty()) {
                 LOG.info("No paths for karmahostage secrets were defined, trying to find path by application name");
-                final Optional<MapPropertySource> byApplicatonname = Optional.ofNullable(environment.getProperty("spring.application.name"))
+                 final Optional<MapPropertySource> byApplicatonname = Optional.ofNullable(environment.getProperty("spring.application.name"))
                         .map(this::getKarmahostagePropertySource);
 
                 byApplicatonname.ifPresent(composite::addFirstPropertySource);

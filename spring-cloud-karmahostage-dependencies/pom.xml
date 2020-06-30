@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <karmahostage-client.version>0.0.4</karmahostage-client.version>
+        <karmahostage-client.version>0.0.5-SNAPSHOT</karmahostage-client.version>
     </properties>
     <parent>
         <artifactId>spring-cloud-dependencies-parent</artifactId>
@@ -11,9 +11,9 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>com.karmahostage</groupId>
+    <groupId>com.karmahostage.cloud</groupId>
     <artifactId>spring-cloud-karmahostage-dependencies</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Spring Cloud Karmahostage :: Dependencies</name>
@@ -22,38 +22,62 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.karmahostage</groupId>
+                <groupId>com.karmahostage.client</groupId>
                 <artifactId>karmahostage-java</artifactId>
                 <version>${karmahostage-client.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.karmahostage</groupId>
+                <groupId>com.karmahostage.cloud</groupId>
                 <artifactId>spring-cloud-karmahostage-secrets</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.karmahostage</groupId>
+                <groupId>com.karmahostage.cloud</groupId>
                 <artifactId>spring-cloud-starter-karmahostage</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.karmahostage</groupId>
+                <groupId>com.karmahostage.cloud</groupId>
                 <artifactId>spring-cloud-karmahostage-secrets</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.karmahostage</groupId>
+                <groupId>com.karmahostage.cloud</groupId>
                 <artifactId>spring-cloud-karmahostage-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <repositoryId>github</repositoryId>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/KarmaHostage/maven-repo</url>
+        </snapshotRepository>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/KarmaHostage/maven-repo</url>
+        </repository>
+    </distributionManagement>
+
     <repositories>
         <repository>
             <id>github</id>
             <name>GitHub Karmahostage API Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/Karmahostage/java-client</url>
+            <url>https://maven.pkg.github.com/Karmahostage/maven-repo</url>
         </repository>
     </repositories>
 </project>
