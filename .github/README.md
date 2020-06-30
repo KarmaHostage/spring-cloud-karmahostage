@@ -6,7 +6,6 @@ Spring Cloud Karmahostage
 Spring Cloud Karmahostage provide Spring Cloud common interface immplementations that consume Karmhostage services. 
 The main objective of this project is to facilitate the integration of Karmahostage functionality in Spring Cloud and Spring Boot applications.
 
-
 # 2. Starters
 
 Starters are convenient dependency descriptors you can include in your application. Include a starter to get the dependencies
