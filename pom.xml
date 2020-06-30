@@ -114,6 +114,19 @@
         </plugins>
     </build>
 
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/KarmaHostage/maven-repo</url>
+        </snapshotRepository>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/KarmaHostage/maven-repo</url>
+        </repository>
+    </distributionManagement>
+
+
     <repositories>
         <repository>
             <id>github</id>
