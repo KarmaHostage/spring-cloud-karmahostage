@@ -14,7 +14,7 @@ and Spring Boot auto-configuration for a feature set.
 
 | Starter  | Features  | 
 |---|---|
-|  ```<dependency>``` <br /> ```  <groupId>org.springframework.cloud</groupId>```<br />```  <artifactId>spring-cloud-starter-kubernetes</artifactId>``` <br /> ```</dependency>``` | All Spring Cloud Features |
+|  ```<dependency>``` <br /> ```  <groupId>org.springframework.cloud</groupId>```<br />```  <artifactId>spring-cloud-starter-karmahostage</artifactId>``` <br /> ```</dependency>``` | All Spring Cloud Features |
 |  ```<dependency>``` <br /> ```  <groupId>org.springframework.cloud</groupId>```<br />```  <artifactId>spring-cloud-starter-secrets</artifactId>``` <br /> ```</dependency>``` | Load Secrets from Karmahostage |
 
 3. Karmahostage PropertySource Implementation
