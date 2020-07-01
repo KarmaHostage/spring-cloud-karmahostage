@@ -4,3 +4,4 @@ target/
 *.iml
 
 application-dev.properties
+*.xml.versionsBackup
