@@ -1,0 +1,19 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>spring-cloud-karmahostage</artifactId>
+        <groupId>com.karmahostage.cloud</groupId>
+        <version>0.0.5-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>spring-cloud-karmahostage-examples</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Spring Cloud Karmahostage :: Examples</name>
+
+    <modules>
+        <module>spring-cloud-karmahostage-example-secrets</module>
+    </modules>
+</project>
