@@ -16,7 +16,7 @@ and Spring Boot auto-configuration for a feature set.
 |  ```<dependency>``` <br /> ```  <groupId>org.springframework.cloud</groupId>```<br />```  <artifactId>spring-cloud-starter-karmahostage</artifactId>``` <br /> ```</dependency>``` | All Spring Cloud Features |
 |  ```<dependency>``` <br /> ```  <groupId>org.springframework.cloud</groupId>```<br />```  <artifactId>spring-cloud-starter-secrets</artifactId>``` <br /> ```</dependency>``` | Load Secrets from Karmahostage |
 
-3. Karmahostage PropertySource Implementation
+# 3. Karmahostage PropertySource Implementation
 
 The most common approach to configuring your Spring Boot application is to 
 create an *application.properties* or *application.yaml* or an *application-profile.properties* or *application-profile.yaml*
