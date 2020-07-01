@@ -42,7 +42,7 @@ You'll need to set the API key using the *spring.cloud.karmahostage.api-key* pro
 By default, if no paths have been defined (See 3.2), the application will look at the application name. It will try to search for
 a secret with the name of your application as the key. 
 
-## 3.2
+## 3.2 Paths Property
 
 You can override the default behaviour by providing *spring.cloud.karmahostage.secrets.paths*.
 
