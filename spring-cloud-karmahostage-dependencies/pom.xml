@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <karmahostage-client.version>0.0.5-SNAPSHOT</karmahostage-client.version>
+        <karmahostage-client.version>0.0.5</karmahostage-client.version>
     </properties>
     <parent>
         <artifactId>spring-cloud-dependencies-parent</artifactId>
@@ -13,7 +13,7 @@
     </parent>
     <groupId>com.karmahostage.cloud</groupId>
     <artifactId>spring-cloud-karmahostage-dependencies</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.6-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Spring Cloud Karmahostage :: Dependencies</name>
