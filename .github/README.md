@@ -15,8 +15,9 @@ and Spring Boot auto-configuration for a feature set.
 |---|---|
 |  ```<dependency>``` <br /> ```  <groupId>org.springframework.cloud</groupId>```<br />```  <artifactId>spring-cloud-starter-karmahostage</artifactId>``` <br /> ```</dependency>``` | All Spring Cloud Features |
 |  ```<dependency>``` <br /> ```  <groupId>org.springframework.cloud</groupId>```<br />```  <artifactId>spring-cloud-starter-secrets</artifactId>``` <br /> ```</dependency>``` | Load Secrets from Karmahostage |
+|  ```<dependency>``` <br /> ```  <groupId>org.springframework.cloud</groupId>```<br />```  <artifactId>spring-cloud-starter-encrypted-properties</artifactId>``` <br /> ```</dependency>``` | Inject Encrypted Properties from Karmahostage |
 
-# 3. Karmahostage PropertySource Implementation
+# 3. PropertySource Implementation
 
 The most common approach to configuring your Spring Boot application is to 
 create an *application.properties* or *application.yaml* or an *application-profile.properties* or *application-profile.yaml*
@@ -51,6 +52,26 @@ Example:
 ```properties
 spring.cloud.karmahostage.secrets.paths=database-username,database-password
 ```
+
+# 3. @EncryptedValue Injection
+
+Injecting encrypted values works out of the box. 
+
+**application.properties** 
+```properties
+spring.cloud.karmahostage.apiKey=${API_KEY}
+application.secret=vault:v1:lRLLIR2WxmOZzzqNC+BY+WuukGZaxt1pPsp9UKduTc7z/jKj7bN6YZZMI2pESA==
+```
+
+Injecting values can simply be done by annotation a field with **@EncryptedValue**. Surrounding the value with "${}" will load the 
+encrypted value from your environment (such as application.properties), otherwise it will try to decrypt the literal value.
+```java
+@EncryptedValue("${application.secret}")
+private String application;
+```
+
+Note: 
+As for every integration with karmahostage, you'll need an API key. Visit [Karmahostage](https://dashboard.karmahostage.com) to register for an API key.
 
 
 
