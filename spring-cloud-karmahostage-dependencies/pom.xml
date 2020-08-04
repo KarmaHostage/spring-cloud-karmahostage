@@ -13,7 +13,7 @@
     </parent>
     <groupId>com.karmahostage.cloud</groupId>
     <artifactId>spring-cloud-karmahostage-dependencies</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Spring Cloud Karmahostage :: Dependencies</name>
