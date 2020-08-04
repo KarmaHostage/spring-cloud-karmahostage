@@ -8,10 +8,10 @@
         <version>0.0.6</version>
     </parent>
 
-    <artifactId>spring-cloud-karmahostage-example-secrets</artifactId>
+    <artifactId>spring-cloud-karmahostage-example-encrypted-properties</artifactId>
     <packaging>jar</packaging>
 
-    <name>Spring Cloud Karmahostage :: Examples :: Secrets</name>
+    <name>Spring Cloud Karmahostage :: Examples :: Encrypted Properties</name>
 
     <dependencies>
         <dependency>

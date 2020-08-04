@@ -5,7 +5,7 @@
     <parent>
         <artifactId>spring-cloud-karmahostage</artifactId>
         <groupId>com.karmahostage.cloud</groupId>
-        <version>0.0.6-SNAPSHOT</version>
+        <version>0.0.6</version>
     </parent>
 
     <artifactId>spring-cloud-karmahostage-examples</artifactId>
@@ -15,5 +15,6 @@
 
     <modules>
         <module>spring-cloud-karmahostage-example-secrets</module>
+        <module>spring-cloud-karmahostage-example-encrypted-properties</module>
     </modules>
 </project>

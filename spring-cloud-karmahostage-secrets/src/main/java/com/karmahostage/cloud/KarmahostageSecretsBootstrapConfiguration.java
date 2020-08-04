@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnProperty(value = "spring.cloud.karmahostage.enabled", matchIfMissing = true)
-public class KarmahostageBootstrapConfiguration {
+public class KarmahostageSecretsBootstrapConfiguration {
 
     @Configuration(proxyBeanMethods = false)
     @Import(KarmahostageAutoConfiguration.class)

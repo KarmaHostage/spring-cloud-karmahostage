@@ -1,2 +1,2 @@
 org.springframework.cloud.bootstrap.BootstrapConfiguration=\
-com.karmahostage.cloud.KarmahostageBootstrapConfiguration
+com.karmahostage.cloud.KarmahostageSecretsBootstrapConfiguration

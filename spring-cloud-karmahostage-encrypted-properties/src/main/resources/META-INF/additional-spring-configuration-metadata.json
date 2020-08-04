@@ -1,0 +1,15 @@
+{
+  "properties": [
+    {
+      "name": "spring.cloud.karmahostage.encryptedproperties.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable the encrypted properties.",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.cloud.karmahostage.encryptedproperties.key",
+      "type": "java.lang.String",
+      "description": "Key ID to decrypt the encrypted value with."
+    }
+  ]
+}

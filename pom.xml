@@ -12,7 +12,7 @@
 
     <groupId>com.karmahostage.cloud</groupId>
     <artifactId>spring-cloud-karmahostage</artifactId>
-    <version>0.0.6-SNAPSHOT</version>
+    <version>0.0.6</version>
     <packaging>pom</packaging>
     <name>Spring Cloud Karmahostage</name>
 
@@ -27,6 +27,7 @@
         <module>spring-cloud-karmahostage-dependencies</module>
         <module>spring-cloud-starter-karmahostage</module>
         <module>spring-cloud-karmahostage-secrets</module>
+        <module>spring-cloud-karmahostage-encrypted-properties</module>
         <module>spring-cloud-karmahostage-examples</module>
         <module>spring-cloud-karmahostage-core</module>
     </modules>
@@ -36,6 +37,7 @@
         <spring-cloud-commons.version>2.2.3.RELEASE</spring-cloud-commons.version>
         <spring-cloud-config.version>2.2.3.RELEASE</spring-cloud-config.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+        <okhttp.version>0.4.8</okhttp.version>
     </properties>
 
     <dependencyManagement>

@@ -10,14 +10,18 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <artifactId>spring-cloud-karmahostage-core</artifactId>
+    <artifactId>spring-cloud-karmahostage-encrypted-properties</artifactId>
 
-    <name>Spring Cloud Karmahostage :: Core</name>
+    <name>Spring Cloud Karmahostage :: Encrypted Properties</name>
 
     <dependencies>
         <dependency>
             <groupId>com.karmahostage.client</groupId>
             <artifactId>karmahostage-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.karmahostage.cloud</groupId>
+            <artifactId>spring-cloud-karmahostage-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
